@@ -1,0 +1,83 @@
+.cover {
+  height: 10rem;
+  background-image: url(/assets/images/cover.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.profile-info {
+  padding-bottom: 2rem;
+  .picutre {
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: #fff;
+
+    div {
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 100%;
+      background-image: url(/assets/images/person.jpg);
+    }
+  }
+
+  .name-title {
+    display: flex;
+    justify-content: space-between;
+
+    .edit {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .location {
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  .attractions {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem 0;
+    div {
+      color: rgba(0, 0, 0, 0.75);
+
+      &:not(:last-child) {
+        padding-right: 0.5rem;
+      }
+      span {
+        color: #000;
+      }
+    }
+  }
+
+  .about {
+    padding: 0.25rem 0;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-bottom: 0.2rem;
+    }
+  }
+}
+.container {
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  max-width: 50rem;
+  position: relative;
+  top: -4rem;
+}
