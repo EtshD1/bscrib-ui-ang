@@ -1,0 +1,101 @@
+.publication {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+  .context {
+    padding-right: 0.25rem;
+
+    .userInfo {
+      display: flex;
+      align-items: center;
+      div {
+        margin-right: 0.75rem;
+      }
+      .name {
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      .image {
+        height: 3rem;
+        width: 3rem;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 100%;
+      }
+      padding-bottom: 0.2rem;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 0.2rem 0;
+    }
+
+    .uri {
+      display: flex;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 0.9rem;
+      padding: 0.2rem 0;
+      div {
+        margin-right: 0.25rem;
+      }
+    }
+
+    .type {
+      color: rgba(0, 0, 0, 0.65);
+      padding: 0.2rem 0;
+      font-size: 0.9rem;
+    }
+
+    .attractions {
+      display: flex;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 1rem;
+      padding-top: 0.2rem;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-left: 0.25rem;
+        }
+      }
+
+      .likes {
+        svg {
+          height: 16px;
+        }
+      }
+
+      .views {
+        padding-left: 0.35rem;
+      }
+
+      .date {
+        flex-grow: 1;
+        justify-content: end;
+      }
+    }
+  }
+
+  .extraInfo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .options {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .image {
+      div {
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        background: rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+}

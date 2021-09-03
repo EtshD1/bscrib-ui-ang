@@ -11,13 +11,17 @@ import { SighupComponent } from './sighup/sighup.component';
 
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { HomepageComponent } from './homepage/homepage.component';
+import { PublicationComponent } from './publication/publication.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    SighupComponent
+    SighupComponent,
+    HomepageComponent,
+    PublicationComponent
   ],
   imports: [
     BrowserModule,
