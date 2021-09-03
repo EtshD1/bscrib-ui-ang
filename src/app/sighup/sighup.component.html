@@ -1,0 +1,27 @@
+<div class="container">
+  <h1 id="logo">bscrib</h1>
+  <h2>Welcome to bscrib</h2>
+  <p>Please Sign up to continue</p>
+</div>
+<div class="form">
+  <form (submit)="handleSubmit()">
+    <label>
+      Email:
+      <input type="email" name="username" required [(ngModel)]="userData.username">
+    </label>
+    <label>
+      Password:
+      <input type="password" name="password" required [(ngModel)]="userData.password">
+    </label>
+    <label>
+      Confirm Password:
+      <input type="password" name="password1" required [(ngModel)]="userData.passwordCheck">
+    </label>
+    <div class="submit">
+      <input type="submit" value="Submit" class="submit">
+    </div>
+  </form>
+  <div class="toSignUp">
+    Already a member? <a href="/login">Login!</a>
+  </div>
+</div>

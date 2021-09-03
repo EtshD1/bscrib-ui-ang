@@ -1,0 +1,64 @@
+#logo {
+  font-weight: 700;
+  color: #076ae0;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.container {
+  padding: 1rem 1.25rem;
+}
+
+h2 {
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+p {
+  color: #000000c4;
+}
+
+.form {
+  padding: 1rem 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  form {
+    .submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0.25rem 1rem;
+        color: #fff;
+        background: #076ae0;
+        border: none;
+        border-radius: 0.5rem;
+      }
+    }
+
+    label {
+      display: block;
+      width: 100%;
+      padding: 1rem 0;
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 0.25rem 0.5rem;
+        display: block;
+        outline: none;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  .toSignUp {
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1rem 0;
+  }
+}
