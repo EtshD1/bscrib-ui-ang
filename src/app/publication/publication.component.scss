@@ -100,14 +100,19 @@
   }
 }
 
-@media (min-width: 620px) {
-  .publication .extraInfo > .image > div {
-    height: 4.5rem;
+@media (min-width: 580px) {
+  .publication .extraInfo {
+    .image > div {
+      height: 4.5rem;
+    }
   }
 }
 
 @media (min-width: 700px) {
   .publication {
     grid-template-columns: 5fr 1fr;
+    .extraInfo .options {
+      display: none;
+    }
   }
 }
