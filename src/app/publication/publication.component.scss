@@ -99,3 +99,9 @@
     }
   }
 }
+
+@media (min-width: 700px) {
+  .publication {
+    grid-template-columns: 5fr 1fr;
+  }
+}
