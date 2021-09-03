@@ -5,6 +5,7 @@ header {
   .brand {
     height: 3rem;
     display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     align-items: center;
 
     form {
@@ -70,6 +71,7 @@ header {
       justify-content: space-between;
 
       .brand {
+        border-bottom: 0px solid rgba(0, 0, 0, 0);
         form {
           width: auto;
         }
