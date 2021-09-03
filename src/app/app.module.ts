@@ -13,6 +13,7 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PublicationComponent } from './publication/publication.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PublicationComponent } from './publication/publication.component';
     LoginComponent,
     SighupComponent,
     HomepageComponent,
-    PublicationComponent
+    PublicationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
