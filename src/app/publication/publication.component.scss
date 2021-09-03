@@ -76,7 +76,7 @@
 
       .date {
         flex-grow: 1;
-        justify-content: end;
+        justify-content: flex-end;
       }
     }
   }
@@ -111,8 +111,15 @@
 @media (min-width: 700px) {
   .publication {
     grid-template-columns: 5fr 1fr;
+
     .extraInfo .options {
       display: none;
+    }
+
+    .context > .attractions > .date {
+      flex-grow: 0;
+      justify-content: flex-start;
+      padding-left: 0.35rem;
     }
   }
 }
