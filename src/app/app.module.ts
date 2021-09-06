@@ -15,6 +15,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PublicationComponent } from './publication/publication.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RequestInterceptorService } from './request-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,11 @@ import { LogoutComponent } from './logout/logout.component';
   providers: [
     AuthService,
     AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
