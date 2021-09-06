@@ -11,11 +11,20 @@ export class AuthService {
 
   constructor(private http: HttpClient, private _router: Router) { }
 
-  registerUser = (newUser: { username: string, password: string }) => {
+  registerUser = (newUser: {
+    email: string,
+    password: string,
+    passwordCheck: string,
+    fName: string,
+    lName: string,
+    phonenumber: string,
+    country: string,
+    bio: string
+  }) => {
     return this.http.post<any>(this._registerURL, newUser);
   }
 
-  loginUser = (newUser: { username: string, password: string }) => {
+  loginUser = (newUser: { email: string, password: string }) => {
     return this.http.post<any>(this._loginURL, newUser);
   }
 
@@ -29,6 +38,6 @@ export class AuthService {
 
   logout = () => {
     localStorage.removeItem("token");
-    return this._router.navigate(["/events"]);
+    return this._router.navigate(["/login"]);
   }
 }
