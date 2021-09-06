@@ -1,20 +1,20 @@
 <div class="publication">
   <div class="context">
-    <div class="userInfo" *ngIf="!user">
-      <div class="name">Ahmed Abdelhady</div>
+    <div class="userInfo" *ngIf="!owner">
+      <div class="name">{{data.userName}}</div>
     </div>
     <div class="title">
-      What Comes Next in the Standoff Between the US and Middle East
+      {{data.title}}
     </div>
     <div class="uri">
-      <div>Google.com</div>
+      <div>{{data.site}}</div>
       <div>-</div>
-      <div>9 min</div>
+      <div>{{data.readTime}}</div>
     </div>
-    <div class="type">Case Study</div>
+    <div class="type">{{data.type}}</div>
     <div class="attractions">
       <div class="likes">
-        1.1k
+        {{data.likes}}k
         <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12.12 1.06003L6.58 6.60003C6.21 6.97003 6 7.48003 6 8.01003V18C6 19.1 6.9 20 8 20H17C17.8 20 18.52 19.52 18.84 18.79L22.1 11.18C22.94 9.20003 21.49 7.00003 19.34 7.00003H13.69L14.64 2.42003C14.74 1.92003 14.59 1.41003 14.23 1.05003C13.64 0.47003 12.7 0.47003 12.12 1.06003V1.06003ZM2 20C3.1 20 4 19.1 4 18V10C4 8.90003 3.1 8.00003 2 8.00003C0.9 8.00003 0 8.90003 0 10V18C0 19.1 0.9 20 2 20Z"
@@ -22,14 +22,14 @@
         </svg>
       </div>
       <div class="views">
-        2k
+        {{data.views}}k
         <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5ZM11 13C8.24 13 6 10.76 6 8C6 5.24 8.24 3 11 3C13.76 3 16 5.24 16 8C16 10.76 13.76 13 11 13ZM11 5C9.34 5 8 6.34 8 8C8 9.66 9.34 11 11 11C12.66 11 14 9.66 14 8C14 6.34 12.66 5 11 5Z"
             fill="black" />
         </svg>
       </div>
-      <div class="date">1/1/2020</div>
+      <div class="date">{{data.date}}</div>
     </div>
   </div>
   <div class="extraInfo">

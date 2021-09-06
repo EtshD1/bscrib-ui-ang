@@ -7,7 +7,27 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PublicationComponent implements OnInit {
 
-  @Input() user: boolean = false;
+  @Input() data: {
+    userName: string,
+    title: string,
+    site: string,
+    readTime: number,
+    type: string,
+    likes: string,
+    views: string,
+    date: string
+  } = {
+      userName: "",
+      title: "",
+      site: "",
+      readTime: 0,
+      type: "",
+      likes: "",
+      views: "",
+      date: ""
+    };
+  @Input() owner: boolean = false;
+
 
   constructor() { }
 
