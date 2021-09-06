@@ -24,7 +24,7 @@ export class AuthService {
     return this.http.post<any>(this._registerURL, newUser);
   }
 
-  loginUser = (newUser: { email: string, password: string }) => {
+  loginUser = (newUser: { username: string, password: string }) => {
     return this.http.post<any>(this._loginURL, newUser);
   }
 
