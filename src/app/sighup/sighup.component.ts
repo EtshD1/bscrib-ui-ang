@@ -17,7 +17,8 @@ export class SighupComponent implements OnInit {
     lName: "",
     phonenumber: "",
     country: "",
-    bio: ""
+    bio: "",
+    title: ""
   }
   warning = {
     email: "",
