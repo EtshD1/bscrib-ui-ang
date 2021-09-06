@@ -1,11 +1,4 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <app-publication></app-publication>
-  <app-publication></app-publication>
-  <app-publication></app-publication>
-  <app-publication></app-publication>
-  <app-publication></app-publication>
-  <app-publication></app-publication>
-  <app-publication></app-publication>
-  <app-publication></app-publication>
+  <app-publication *ngFor="let p of publications" [data]="p"></app-publication>
 </div>

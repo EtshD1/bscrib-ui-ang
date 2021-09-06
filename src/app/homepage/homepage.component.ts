@@ -8,7 +8,7 @@ import { FeedService } from '../feed.service';
 })
 export class HomepageComponent implements OnInit {
 
-  publications = []
+  publications = [];
 
   constructor(
     private _feed: FeedService
@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this._feed.getFeed().subscribe(res => {
-      console.log(res);
+      this.publications = res;
     },
       err => {
         console.log(err);
