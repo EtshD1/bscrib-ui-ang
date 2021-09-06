@@ -5,17 +5,57 @@
 </div>
 <div class="form">
   <form (submit)="handleSubmit()">
+    <p class="warning">{{warning.email}}</p>
     <label>
       Email:
-      <input type="email" name="username" required [(ngModel)]="userData.username">
+      <input type="email" name="email" required [(ngModel)]="userData.email">
     </label>
+    <div class="split">
+      <div>
+        <p class="warning">{{warning.fName}}</p>
+        <label>
+          First Name:
+          <input type="text" name="fName" required [(ngModel)]="userData.fName">
+        </label>
+      </div>
+      <div>
+        <p class="warning">{{warning.lName}}</p>
+        <label>
+          Last Name:
+          <input type="text" name="fName" required [(ngModel)]="userData.lName">
+        </label>
+      </div>
+    </div>
+    <div class="split">
+      <div>
+        <p class="warning">{{warning.phonenumber}}</p>
+        <label>
+          Phone Number:
+          <input type="text" name="phonenumber" required [(ngModel)]="userData.phonenumber">
+        </label>
+      </div>
+      <div>
+        <p class="warning">{{warning.country}}</p>
+        <label>
+          Country:
+          <input type="text" name="country" required [(ngModel)]="userData.country">
+        </label>
+      </div>
+    </div>
+    <div>
+      <p class="warning">{{warning.password}}</p>
+      <label>
+        Password:
+        <input type="password" name="password" required [(ngModel)]="userData.password">
+      </label>
+      <label>
+        Confirm Password:
+        <input type="password" name="password1" required [(ngModel)]="userData.passwordCheck">
+      </label>
+    </div>
     <label>
-      Password:
-      <input type="password" name="password" required [(ngModel)]="userData.password">
-    </label>
-    <label>
-      Confirm Password:
-      <input type="password" name="password1" required [(ngModel)]="userData.passwordCheck">
+      Bio:
+      <textarea name="bio" rows="3" [(ngModel)]="userData.bio"></textarea>
     </label>
     <div class="submit">
       <input type="submit" value="Submit" class="submit">

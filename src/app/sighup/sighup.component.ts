@@ -10,10 +10,23 @@ import { AuthService } from '../auth.service';
 export class SighupComponent implements OnInit {
 
   userData = {
-    username: "",
+    email: "",
     password: "",
-    passwordCheck: ""
+    passwordCheck: "",
+    fName: "",
+    lName: "",
+    phonenumber: "",
+    country: "",
+    bio: ""
   }
+  warning = {
+    email: "",
+    password: "",
+    fName: "",
+    lName: "",
+    phonenumber: "",
+    country: "",
+  };
 
   constructor(
     private _auth: AuthService,
@@ -24,11 +37,51 @@ export class SighupComponent implements OnInit {
   }
 
   handleSubmit = () => {
+    this.warning = {
+      email: "",
+      password: "",
+      fName: "",
+      lName: "",
+      phonenumber: "",
+      country: "",
+    };
+    let submittable = true;
+    if (!this.userData.email) {
+      this.warning.email += "Please Enter a Valid Email";
+      submittable = false;
+    }
     if (this.userData.password !== this.userData.passwordCheck) {
+      this.warning.password += "Passwords do not match"
+      submittable = false;
+    }
+    if (!this.userData.fName) {
+      this.warning.fName += "Please Enter Your First Name"
+      submittable = false;
+    }
+    if (!this.userData.lName) {
+      this.warning.lName += "Please Enter Your Last Name"
+      submittable = false;
+    }
+    if (!this.userData.country) {
+      this.warning.country += "Please Enter Your Country"
+      submittable = false;
+    }
+    if (!this.userData.phonenumber) {
+      this.warning.phonenumber += "Please Enter Your Phone Number"
+      submittable = false;
+    }
+    if (submittable) {
       this._auth.registerUser(this.userData)
         .subscribe(res => {
-          localStorage.setItem("token", res.token);
-          this._router.navigate(["/homepage"]);
+          console.log(res)
+          if (res.token) {
+            localStorage.setItem("token", res.token);
+            this._router.navigate(["/"]);
+          } else {
+            if (res.info === "User already exists!") {
+              this.warning.email += "Email already used, Please use a different email!";
+            }
+          }
         }, err => {
           console.log(err);
         });
