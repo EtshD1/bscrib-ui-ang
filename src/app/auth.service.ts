@@ -19,7 +19,8 @@ export class AuthService {
     lName: string,
     phonenumber: string,
     country: string,
-    bio: string
+    bio: string,
+    title: string
   }) => {
     return this.http.post<any>(this._registerURL, newUser);
   }
