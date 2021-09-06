@@ -1,24 +1,10 @@
 <header>
   <nav>
     <div class="brand">
-      <form>
-        <label>
-          <div>
-            <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.25 20L15.764 15.506M18.25 9.5C18.25 11.7543 17.3545 13.9163 15.7604 15.5104C14.1663 17.1045 12.0043 18 9.75 18C7.49566 18 5.33365 17.1045 3.73959 15.5104C2.14553 13.9163 1.25 11.7543 1.25 9.5C1.25 7.24566 2.14553 5.08365 3.73959 3.48959C5.33365 1.89553 7.49566 1 9.75 1C12.0043 1 14.1663 1.89553 15.7604 3.48959C17.3545 5.08365 18.25 7.24566 18.25 9.5Z"
-                stroke="black" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </div>
-          <div class="input">
-            <input type="text">
-          </div>
-        </label>
-      </form>
     </div>
     <div class="nav-links">
       <div class="home">
-        <a routerLink="/homepage">
+        <a routerLink="/">
           <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 15V22.5H1V9L10 1.5L19 9V22.5H13V15H7Z" stroke="black" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -35,14 +21,22 @@
           </svg>
         </a>
       </div>
-      <div>
-        <a routerLink="/profile">
+      <div class="profile" [class.active]="profileMenuActive">
+        <div (click)="toggleProfileMenu()">
           <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M22 25V22.3333C22 20.9189 21.4593 19.5623 20.4969 18.5621C19.5345 17.5619 18.2291 17 16.8681 17H6.60417C5.2431 17 3.93777 17.5619 2.97534 18.5621C2.01291 19.5623 1.47223 20.9189 1.47223 22.3333V25M16.8681 6.33333C16.8681 9.27885 14.5704 11.6667 11.7361 11.6667C8.90182 11.6667 6.60417 9.27885 6.60417 6.33333C6.60417 3.38781 8.90182 1 11.7361 1C14.5704 1 16.8681 3.38781 16.8681 6.33333Z"
               stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </a>
+        </div>
+        <div class="menu">
+          <div class="view-profile">
+            <a routerLink="/my-profile">View Profile</a>
+          </div>
+          <div class="logout">
+            <a href="/logout">Logout</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>

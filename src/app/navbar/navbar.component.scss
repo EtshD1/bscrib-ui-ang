@@ -45,7 +45,54 @@ header {
     height: 3rem;
     background: #fff;
 
-    div {
+    .profile {
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      cursor: pointer;
+
+      .menu {
+        position: absolute;
+        top: 0;
+        transition: 0.5s ease;
+        opacity: 0;
+        font-weight: bold;
+        color: red;
+        text-decoration: none;
+        pointer-events: none;
+        width: 9.5rem;
+        transform: translateX(-55%);
+        background-color: #fff;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        padding: 0.25rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+
+        .view-profile a {
+          color: #076ae0;
+        }
+
+        .logout a {
+          color: red;
+        }
+
+        a {
+          padding: 0.5rem 0;
+          text-decoration: none;
+        }
+      }
+
+      &.active .menu {
+        opacity: 1;
+        pointer-events: all;
+        transform: translate(-55%, -100%);
+      }
+    }
+
+    & > div {
       height: 100%;
 
       a {
@@ -80,6 +127,15 @@ header {
     .nav-links {
       position: static;
       border: none;
+
+      .profile.active .menu {
+        transform: translate(-55%, 67%);
+      }
+
+      .profile .menu {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-top: 0;
+      }
     }
   }
 }
