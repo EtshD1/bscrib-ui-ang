@@ -95,11 +95,95 @@ header {
     & > div {
       height: 100%;
 
-      a {
+      a,
+      .post-publication {
         padding: 0 1rem;
         display: flex;
         align-items: center;
         height: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.form {
+  position: fixed;
+  top: 49px;
+  left: 0;
+  right: 0;
+
+  & > div {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+    .check {
+      background-color: #fff;
+      border: 2px solid #076ae0;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      color: #076ae0;
+      margin-left: 0.25rem;
+      display: inline-block;
+      flex-basis: auto;
+    }
+
+    .submit {
+      display: flex;
+      justify-content: flex-end;
+
+      input,
+      button {
+        border: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding: 0.45rem 0.65rem;
+        border-radius: 0.25rem;
+      }
+
+      input {
+        background: #076ae0;
+        color: #fff;
+      }
+
+      button {
+        background: #fff;
+        border: 1px solid red;
+        color: red;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .url {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      div {
+        flex-basis: 100%;
+      }
+
+      input {
+        flex-grow: 1;
+        width: auto;
+      }
+    }
+
+    label {
+      display: block;
+
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
       }
     }
   }
