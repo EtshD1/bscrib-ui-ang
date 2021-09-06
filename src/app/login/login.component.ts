@@ -10,7 +10,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
 
   userData = {
-    username: "",
+    email: "",
     password: ""
   }
 
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem("token", res.token);
-          this._router.navigate(["/homepage"]);
+          this._router.navigate(["/"]);
         },
         err => {
           console.log(err);
